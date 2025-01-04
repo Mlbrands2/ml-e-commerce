@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Collection = () => {
+const Home = () => {
   return (
     <div className="container mx-auto py-10">
-      Collection Page</div>
+      Home Page</div>
   )
 }
 
-export default Collection
+export default Home

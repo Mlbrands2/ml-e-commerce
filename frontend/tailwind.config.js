@@ -27,6 +27,7 @@ export default {
         hero: "url(/src/assets/bg.png)",
         banner: "url(/src/assets/banner.png)"
       },
+      
     },
   },
   plugins: [],
