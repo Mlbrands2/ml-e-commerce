@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useContext, useState } from 'react'; 
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
-import { TbBasket, TbUserCircle, TbMoon, TbSun } from "react-icons/tb";
+import { TbBasket } from "react-icons/tb";
 import { RiUserLine } from "react-icons/ri";
+import {ShopContext} from '../context/ShopContext';
 
-const Header = ({ darkMode, toggleDarkMode }) => {
-  const [token, setToken] = React.useState("");
-  const [menuOpened, setMenuOpened] = React.useState(false);
+const Header = () => {
+  const {token}=useContext(ShopContext)
+  const [menuOpened, setMenuOpened] = useState(false);
 
   const toggleMenu = () => setMenuOpened((prev) => !prev);
 
   return (
-    <header
-      className={`header-container w-full z-50 ${
-        darkMode ? "bg-gray-800 text-white" : "bg-white text-black"
-      } shadow-md`}
-    >
+    <header className="header-container w-full z-50 bg-white text-black shadow-md">
       <div className="header-content max-w-screen-xl mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo Section */}
         <div className="flex items-center">
@@ -60,14 +57,6 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             </span>
           </Link>
 
-          {/* Dark/Light Mode Toggle */}
-          <button
-            onClick={toggleDarkMode}
-            className="flex items-center justify-center text-xl"
-          >
-            {darkMode ? <TbSun className="text-yellow-500" /> : <TbMoon />}
-          </button>
-
           {/* User Profile */}
           <div className="relative">
             {token ? (
@@ -85,4 +74,3 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 };
 
 export default Header;
- 

@@ -43,19 +43,19 @@ const Hero = () => {
         {/* Right Side: Text */}
         <div className="text-center md:text-left md:w-1/2 px-6">
           <h5 className="text-lg font-semibold text-secondary flex items-center justify-center md:justify-start gap-2 mb-4 uppercase">
-            Modern Collection <BsDroplet className="text-blue-500" />
+            Modern livestock market <BsDroplet className="text-blue-500" />
           </h5>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-            Every Click Brings You Closer To Perfection.
+            Every Click Brings You Closer To Perfect livestock.
             <br />
-            <span className="text-secondary">Shop Now!</span>
+            <span className="text-secondary">Grab you animal Now!</span>
           </h1>
           <div className="flex justify-center md:justify-start">
             <Link
               to="/collection"
               className="inline-flex items-center bg-blue-500 text-white font-semibold text-lg py-3 px-6 rounded-full shadow-lg hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
             >
-              Check Our Modern Collection
+              Check Our Modern livestock Collection
               <FaArrowRight className="bg-secondary text-white rounded-full h-11 w-11 p-3 m-[3px] border border-white group-hover:-rotate-[20deg] transition-all duration-500" />
             </Link>
           </div>

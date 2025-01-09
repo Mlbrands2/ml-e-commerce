@@ -10,16 +10,17 @@ const Navbar = ({ containerStyles }) => {
   ];
 
   return (
-    <nav className={containerStyles}>
+    <nav className={` ${containerStyles}`}>
       {navLinks.map((link) => (
         <NavLink
           key={link.title}
           to={link.path}
           className={({ isActive }) =>
-            `${isActive ? "bg-blue-500 text-white" : ""} hover:bg-blue-100 
+            `${isActive ? "active link" : ""} hover:bg-blue-100 
             px-3 py-2 rounded-full transition duration-300 ease-in-out`
           }
         >
+          
           <div className="flex items-center gap-x-1">{link.title}</div>
         </NavLink>
       ))}
