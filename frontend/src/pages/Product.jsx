@@ -132,7 +132,7 @@ const Product = () => {
         <p className="text-gray-600 mb-6">Enjoy cash on delivery for your convenience.</p>
         <ProductDescription />
         <ProductFeatures />
-        <RelatedProducts />
+        <RelatedProducts category={product.category} subCategory={product.subCategory} />
       </div>
 
       <Footer />
